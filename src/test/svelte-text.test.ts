@@ -25,7 +25,7 @@ describe('SvelteText.svelte', () => {
     })
 
     it('click button && getCount', async () => {
-        const { getByRole, container } = render(SvelteText, { text: 'svelte-vitest', count: 0 })
+        const { getByRole, container } = render(SvelteText, { text: 'svelte-vitest' })
         const btn = getByRole('button')
         expect(container?.innerHTML).toContain('0')
 
