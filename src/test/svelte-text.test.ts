@@ -1,4 +1,4 @@
-import { cleanup, render } from '@testing-library/svelte'
+import { cleanup, render, fireEvent } from '@testing-library/svelte'
 import SvelteText from '../lib/wc/SvelteText.svelte'
 import { describe, it, expect, afterEach } from 'vitest'
 
@@ -22,5 +22,20 @@ describe('SvelteText.svelte', () => {
         const { getByTestId } = render(SvelteText, { text: 'svelte-vitest' })
         const text = getByTestId('text')
         expect(text?.innerHTML).toContain('svelte-vitest')
+    })
+
+    it('click button && getCount', async () => {
+        const { getByRole, container } = render(SvelteText, { text: 'svelte-vitest', count: 0 })
+        const btn = getByRole('button')
+        expect(container?.innerHTML).toContain('0')
+
+        await fireEvent.click(btn)
+        expect(container?.innerHTML).toContain('1')
+        await fireEvent.click(btn)
+
+        expect(container?.innerHTML).toContain('2')
+        await fireEvent.click(btn)
+
+        expect(container?.innerHTML).toContain('3')
     })
 })
