@@ -18,4 +18,9 @@ describe('SvelteText.svelte', () => {
         const { container } = render(SvelteText, { text: 'svelte-vitest' })
         expect(container.innerHTML).toContain('svelte-vitest')
     })
+    it('getTextByTestId', () => {
+        const { getByTestId } = render(SvelteText, { text: 'svelte-vitest' })
+        const text = getByTestId('text')
+        expect(text?.innerHTML).toContain('svelte-vitest')
+    })
 })

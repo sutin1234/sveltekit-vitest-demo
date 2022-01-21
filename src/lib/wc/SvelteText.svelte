@@ -3,4 +3,4 @@
 </script>
 
 <h3>SvelteText</h3>
-{text}
+<div data-testid="text">{text}</div>
