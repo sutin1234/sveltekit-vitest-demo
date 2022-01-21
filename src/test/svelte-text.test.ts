@@ -6,8 +6,12 @@ describe('SvelteText.svelte', () => {
     afterEach(() => cleanup())
 
     it('Mounted', () => {
-        const { container } = render(SvelteText)
+        const { container } = render(SvelteText, { text: '' })
         expect(container).toBeTruthy()
+    })
+    it('get SvelteText', () => {
+        const { container } = render(SvelteText, { text: '' })
+        expect(container.innerHTML).toContain('SvelteText')
     })
 
     it('pass props text', () => {
