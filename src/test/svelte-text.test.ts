@@ -33,9 +33,5 @@ describe('SvelteText.svelte', () => {
         expect(container?.innerHTML).toContain('1')
         await fireEvent.click(btn)
 
-        expect(container?.innerHTML).toContain('2')
-        await fireEvent.click(btn)
-
-        expect(container?.innerHTML).toContain('3')
     })
 })
