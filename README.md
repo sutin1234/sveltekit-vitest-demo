@@ -1,5 +1,10 @@
 # Sveltekit Vitest
 
+<img src="https://kit.svelte.dev/_app/assets/svelte-kit-machine-f3127665.png
+" width="256" align="middle">
+<img src="https://vitest.dev/logo.svg
+" align="middle">
+
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 
 ## Creating a project
